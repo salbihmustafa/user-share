@@ -1,3 +1,4 @@
+import "./App.css";
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -11,13 +12,17 @@ import NewPlace from "./places/pages/NewPlace";
 
 const App = () => {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact component={Users} />
-        <Route path="/places/new" exact component={NewPlace} />
-        <Redirect to="/" />
-      </Switch>
-    </Router>
+    <div className="container">
+      <div className="content">
+        <Router>
+          <Switch>
+            <Route path="/" exact component={Users} />
+            <Route path="/places/new" exact component={NewPlace} />
+            <Redirect to="/" />
+          </Switch>
+        </Router>
+      </div>
+    </div>
   );
 };
 

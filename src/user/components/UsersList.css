@@ -1,4 +1,11 @@
 .users-list{
     list-style-type: none;
-    padding: 20px 200px;
+    padding: 0;
+    margin: 10px 10px;
+}
+
+@media screen and (min-width: 500px) {
+    .users-list{
+        margin: 10px 100px;
+    }
 }
