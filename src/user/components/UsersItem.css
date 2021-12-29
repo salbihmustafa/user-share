@@ -1,0 +1,44 @@
+.user-item__content{
+    display: flex;
+    align-items: center;
+}
+.user-item__content:hover{
+    background: gold;
+}
+
+.user-item__content:hover .user-item__info h3{
+    color: black;
+}
+
+.user-item__content:hover .user-item__info h4{
+    color: black;
+}
+.user-item__content:hover .user-item__info h4:hover{
+    color: white;
+}
+
+.user-item__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+
+    /* border: 1px solid red; */
+}
+
+.user-item__info h3{
+    margin-bottom: 5px;
+    margin-top: 0;
+    color: gold;
+    font-weight: normal;
+}
+
+.user-item__info h4{
+    margin: 0;
+    color: white;
+    font-weight: normal;
+    cursor: pointer;
+}
+.user-item__info h4:hover{
+    color: gold;
+}

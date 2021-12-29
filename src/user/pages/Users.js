@@ -23,38 +23,38 @@ const Users = () => {
   }, []);
   
   if(images.length === 0){
-    return <div>Loading...</div>;
+    return <div className="center">Loading...</div>;
   }else{
     USERS = [
       {
         id: Guid.newGuid().toString(),
         image: images[0].user.profile_image.medium,
         name: "Salbih",
-        places: 20,
+        places: 3,
       },
       {
         id: Guid.newGuid().toString(),
         image: images[1].user.profile_image.medium,
         name: "Aziza",
-        places: 20,
+        places: 5,
       },
       {
         id: Guid.newGuid().toString(),
         image: images[2].user.profile_image.medium,
         name: "Yasin",
-        places: 20,
+        places: 1,
       },
       {
         id: Guid.newGuid().toString(),
         image: images[3].user.profile_image.medium,
         name: "Muna",
-        places: 20,
+        places: 10,
       },
       {
         id: Guid.newGuid().toString(),
         image: images[4].user.profile_image.medium,
         name: "Tamba",
-        places: 20,
+        places: 2,
       },
     ];
   }
