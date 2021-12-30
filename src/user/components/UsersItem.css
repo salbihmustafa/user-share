@@ -9,14 +9,14 @@
     text-decoration: none;
 }
 
-.user-item__content a:hover .user-item__info h3{
+.user-item__content:hover .user-item__info h3{
     color: black;
 }
 
-.user-item__content a:hover .user-item__info h4{
+.user-item__content:hover .user-item__info h4{
     color: black;
 }
-.user-item__content a:hover .user-item__info h4:hover{
+.user-item__content:hover .user-item__info h4:hover{
     color: white;
 }
 
