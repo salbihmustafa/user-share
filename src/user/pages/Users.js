@@ -7,9 +7,7 @@ const Users = () => {
   const [images, setImages] = useState([]);
   let USERS = [{}];
 
-  console.log("Render");
   useEffect(() => {
-    console.log("in useEffect")
     const fetchData = async () => {
       const response = await unsplash.get("/search/photos", {
         params: { query: "person" },

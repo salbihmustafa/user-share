@@ -1,22 +1,26 @@
-.user-item__content{
-    display: flex;
-    align-items: center;
-}
 .user-item__content:hover{
     background: gold;
+    cursor: pointer;
 }
 
-.user-item__content:hover .user-item__info h3{
+.user-item__content a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.user-item__content a:hover .user-item__info h3{
     color: black;
 }
 
-.user-item__content:hover .user-item__info h4{
+.user-item__content a:hover .user-item__info h4{
     color: black;
 }
-.user-item__content:hover .user-item__info h4:hover{
+.user-item__content a:hover .user-item__info h4:hover{
     color: white;
 }
 
+/* h4 is the div of the name and place count */
 .user-item__info {
     display: flex;
     flex-direction: column;
@@ -26,6 +30,7 @@
     /* border: 1px solid red; */
 }
 
+/* h3 is the name */
 .user-item__info h3{
     margin-bottom: 5px;
     margin-top: 0;
@@ -33,6 +38,7 @@
     font-weight: normal;
 }
 
+/* h4 is the place count */
 .user-item__info h4{
     margin: 0;
     color: white;
