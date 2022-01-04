@@ -39,8 +39,13 @@ hr{
     width: 100%;
 }
 
-.place-btns button{
-    margin: 10px;
+.place-btns i{
+    margin: 20px;
+}
+
+.place-btns i:hover{
+    color: gold;
+    cursor: pointer;
 }
 
 

@@ -10,15 +10,21 @@ const PlaceItem = (props) => {
           <img src={props.imageUrl} alt={props.title}></img>
         </div>
         <div className="place-info">
-          <div><h2>{props.title}</h2></div>
-          <div><h3>{props.address}</h3></div>
-          <div><p>{props.description}</p></div>
+          <div>
+            <h2>{props.title}</h2>
+          </div>
+          <div>
+            <h3>{props.address}</h3>
+          </div>
+          <div>
+            <p>{props.description}</p>
+          </div>
         </div>
-        <hr/>
+        <hr />
         <div className="place-btns">
-          <button>Map</button>
-          <button>Edit</button>
-          <button>Delete</button>
+          <i class="fas fa-map"></i> {/* View Map */}
+          <i class="fas fa-edit"></i> {/* Edit */}
+          <i class="fas fa-trash-alt"></i> {/* Delete */}
         </div>
       </Card>
     </li>
