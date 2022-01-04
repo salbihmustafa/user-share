@@ -6,21 +6,21 @@ import PlaceItem from "./PlaceItem";
 const PlaceList = (props) => {
   if (props.items.length === 0) {
     return (
-      <div>
+      <div className="center">
         <Card>
           <h2>No places found.</h2>
-          <button>Share Place</button>
+          <button>Add Place</button>
         </Card>
       </div>
     );
   }
   return (
-    <ul>
+    <ul className="place-list">
       {props.items.map((place) => (
         <PlaceItem
           key={place.id}
           id={place.id}
-          image={place.imageUrl}
+          imageUrl={place.imageUrl}
           title={place.title}
           description={place.description}
           address={place.address}

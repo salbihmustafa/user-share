@@ -5,14 +5,14 @@ import unsplash from "../../api/unsplash";
 
 const UserPlaces = () => {
   const [images, setImages] = useState([]);
-  let PLACES = [{}];
+  let PLACES = [];
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await unsplash.get("/search/photos", {
         params: { query: "places" },
       });
-
+      console.log(response.data.results);
       setImages(response.data.results);
       //images[0].user.profile_image.small
     };
@@ -26,10 +26,22 @@ const UserPlaces = () => {
     PLACES = [
       {
         id: Guid.newGuid().toString(),
-        imageUrl: images[0].user.profile_image.medium,
-        title: "My places",
-        description: "This is my description",
-        address: "123 Main Street",
+        imageUrl: images[0].urls.regular,
+        title: "Empire State Building",
+        description: "One of the most famous sky scrapers in the world!",
+        address: "20 W 34th St, New York, NY 1001",
+        creatorId: "u1",
+        coordinates: {
+            lat: 40.7484405,
+            lng: -73.9878531
+        }
+      },
+      {
+        id: Guid.newGuid().toString(),
+        imageUrl: images[1].urls.regular,
+        title: "Empire State Building",
+        description: "One of the most famous sky scrapers in the world!",
+        address: "20 W 34th St, New York, NY 1001",
         creatorId: "u2",
         coordinates: {
             lat: 40.7484405,

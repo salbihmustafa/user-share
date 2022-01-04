@@ -1,0 +1,46 @@
+.place-item{
+    list-style: none;
+}
+
+.place-card{
+    background: white;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.place-img{
+    width: 100%;
+}
+
+.place-img img{
+    width: 100%;
+}
+
+.place-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.place-info div{
+    margin-top: -20px;
+}
+p{
+    text-align: center;
+}
+
+.place-btns{
+    display: flex;
+    justify-content: center;
+}
+
+hr{
+    width: 100%;
+}
+
+.place-btns button{
+    margin: 10px;
+}
+
+
