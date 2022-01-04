@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import PlaceList from "../components/PlaceList";
 import { Guid } from "js-guid";
 import unsplash from "../../api/unsplash";
 
 const UserPlaces = () => {
   const [images, setImages] = useState([]);
+  const uid = useParams().uid;
+
   let PLACES = [];
 
   useEffect(() => {
@@ -51,7 +54,11 @@ const UserPlaces = () => {
     ];
   }
 
-  return <PlaceList items={PLACES} />;
+  const loadedPlaces = PLACES.filter(place => {
+    return place.creatorId === uid;
+  })
+
+  return <PlaceList items={loadedPlaces} />;
 };
 
 export default UserPlaces;

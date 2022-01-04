@@ -2,6 +2,19 @@
     padding: 0 20px;
 }
 
+.place-list-card{
+    background: white;
+}
+
+.place-list-card i{
+    font-size: 48px;
+}
+
+.place-list-card i:hover{
+    color: gold;
+    cursor: pointer;
+}
+
 @media screen and (min-width: 650px){
     .place-list{
         padding: 0 100px;

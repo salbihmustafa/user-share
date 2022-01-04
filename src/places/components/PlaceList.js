@@ -7,9 +7,10 @@ const PlaceList = (props) => {
   if (props.items.length === 0) {
     return (
       <div className="center">
-        <Card>
-          <h2>No places found.</h2>
-          <button>Add Place</button>
+        <Card className="place-list-card">
+          <h2>No places found, please add a place.</h2>
+          <hr/>
+          <i class="fas fa-plus"></i>
         </Card>
       </div>
     );
