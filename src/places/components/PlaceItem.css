@@ -33,19 +33,11 @@ p{
 .place-btns{
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 hr{
     width: 100%;
-}
-
-.place-btns i{
-    margin: 30px;
-}
-
-.place-btns i:hover{
-    color: gold;
-    cursor: pointer;
 }
 
 

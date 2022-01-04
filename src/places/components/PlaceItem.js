@@ -1,6 +1,7 @@
 import "./PlaceItem.css";
 import React from "react";
 import Card from "../../shared/components/UIElements/Card";
+import Button from "../../shared/components/UIElements/Button";
 
 const PlaceItem = (props) => {
   return (
@@ -22,9 +23,9 @@ const PlaceItem = (props) => {
         </div>
         <hr />
         <div className="place-btns">
-          <i class="fas fa-map"></i> {/* View Map */}
-          <i class="fas fa-edit"></i> {/* Edit */}
-          <i class="fas fa-trash-alt"></i> {/* Delete */}
+          <Button inverse><i class="fas fa-map"></i></Button>
+          <Button inverse to={`/places/${props.id}`}><i class="fas fa-edit"></i></Button>
+          <Button danger><i class="fas fa-trash-alt"></i></Button>
         </div>
       </Card>
     </li>
