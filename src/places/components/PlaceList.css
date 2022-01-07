@@ -15,6 +15,11 @@
     cursor: pointer;
 }
 
+.map-container {
+    height: 15rem;
+    width: 100%;
+}
+
 @media screen and (min-width: 650px){
     .place-list{
         padding: 0 100px;

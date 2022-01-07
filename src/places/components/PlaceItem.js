@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Card from "../../shared/components/UIElements/Card";
 import Button from "../../shared/components/UIElements/Button";
 import Modal from "../../shared/components/UIElements/Modal";
+import Map from "../../shared/components/UIElements/Map";
 
 const PlaceItem = (props) => {
   const [showMap, setShowMap] = useState(false);
@@ -21,7 +22,7 @@ const PlaceItem = (props) => {
         footer={<Button onClick={closeMapHandler}>CLOSE</Button>}
       >
         <div className="map-container">
-          <h2>THE MAP!</h2>
+          <Map center={props.coordinates} zoom={16} />
         </div>
       </Modal>
       <li className="place-item">
@@ -43,13 +44,13 @@ const PlaceItem = (props) => {
           <hr />
           <div className="place-btns">
             <Button inverse onClick={openMapHandler}>
-              <i class="fas fa-map"></i>
+              <i className="fas fa-map"></i>
             </Button>
             <Button inverse to={`/places/${props.id}`}>
-              <i class="fas fa-edit"></i>
+              <i className="fas fa-edit"></i>
             </Button>
             <Button danger>
-              <i class="fas fa-trash-alt"></i>
+              <i className="fas fa-trash-alt"></i>
             </Button>
           </div>
         </Card>
