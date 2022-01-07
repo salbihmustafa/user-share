@@ -6,10 +6,11 @@
     @placeholder - optional
     @label - required
     @errorText - required
+    @onInput - required
     
 */
 import "./Input.css";
-import React, { useReducer } from "react";
+import React, { useReducer, useEffect } from "react";
 import { validate } from "../util/validators";
 
 const inputReducer = (state, action) => {
@@ -49,6 +50,13 @@ const Input = (props) => {
   const touchHandler = () => {
     dispatch({ type: "TOUCH" });
   };
+
+  const { id, onInput } = props;
+  const { value, isValid } = inputState;
+
+  useEffect(() => {
+    onInput(id, value, isValid); //pass to parent component
+  }, [id, value, isValid, onInput]);
 
   const element =
     props.element === "input" ? (
